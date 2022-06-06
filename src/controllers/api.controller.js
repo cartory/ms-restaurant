@@ -30,7 +30,7 @@ const getRecipesHistory = async ({ query }, res) => {
 
     try {
         const axiosRes = await axios.get(
-            process.env.HOST_MS_WAREHOUSE + `/api/history/recipes?page=${page}&limit=${limit}`
+            process.env.HOST_MS_KITCHEN + `/api/history/recipes?page=${page}&limit=${limit}`
         )
         return res.status(200).json(axiosRes.data ?? [])
     } catch (err) {
