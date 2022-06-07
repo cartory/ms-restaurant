@@ -47,7 +47,7 @@ const getMarketHistory = async ({ query }, res) => {
 
     try {
         const axiosRes = await axios.get(
-            process.env.HOST_MS_WAREHOUSE + `/api/history/ingredients?page=${page}&limit=${limit}`
+            process.env.HOST_MS_WAREHOUSE + `/api/history/market?page=${page}&limit=${limit}`
         )
         return res.status(200).json(axiosRes.data ?? [])
     } catch (err) {
