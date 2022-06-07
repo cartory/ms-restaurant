@@ -5,7 +5,7 @@ const getRecipes = async (_, res) => {
         const axiosRes = await axios.get(process.env.HOST_MS_KITCHEN + "/api/recipes")
         return res.status(200).json(axiosRes.data ?? [])
     } catch (err) {
-        console.error(err)
+        console.error('error getRecipes')
         return res.status(500).json([])
     }
 }
@@ -17,7 +17,7 @@ const getRecipe = async ({ params }, res) => {
         const axiosRes = await axios.get(process.env.HOST_MS_KITCHEN + "/api/recipes/" + id)
         return res.status(200).json(axiosRes.data ?? null)
     } catch (err) {
-        console.error(err)
+        console.error('error getRecipe')
         return res.status(500).json(null)
     }
 }
@@ -34,7 +34,7 @@ const getRecipesHistory = async ({ query }, res) => {
         )
         return res.status(200).json(axiosRes.data ?? [])
     } catch (err) {
-        console.error(err)
+        console.error('error getRecipesHistory')
         return res.status(500).json([])
     }
 }
@@ -51,7 +51,7 @@ const getMarketHistory = async ({ query }, res) => {
         )
         return res.status(200).json(axiosRes.data ?? [])
     } catch (err) {
-        console.error(err)
+        console.error('error getMarketHistory')
         return res.status(500).json([])
     }
 }
