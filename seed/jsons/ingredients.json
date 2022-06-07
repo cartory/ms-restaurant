@@ -1,0 +1,62 @@
+[
+	{
+		"name": "tomato",
+		"stock": 5,
+		"imageUrl": "https://i.pinimg.com/originals/e1/a1/17/e1a117e9cacfb963fbb70a805f3e0109.jpg",
+		"minimumStock": 10
+	},
+	{
+		"name": "lemon",
+		"stock": 5,
+		"imageUrl": "https://m.media-amazon.com/images/I/51eo9ctZmmL._AC_SL1000_.jpg",
+		"minimumStock": 10
+	},
+	{
+		"name": "potato",
+		"stock": 5,
+		"imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHkF5bntSSDeyCq7hhDI8C0kb9yn6_V6sSUw&usqp=CAU",
+		"minimumStock": 10
+	},
+	{
+		"name": "rice",
+		"stock": 5,
+		"imageUrl": "https://i.pinimg.com/736x/0b/69/dc/0b69dcdc5d2d9ffeba72b765d5e22f99.jpg",
+		"minimumStock": 10
+	},
+	{
+		"name": "ketchup",
+		"stock": 5,
+		"imageUrl": "https://ih1.redbubble.net/image.1011060174.5910/st,small,507x507-pad,600x600,f8f8f8.jpg",
+		"minimumStock": 10
+	},
+	{
+		"name": "lettuce",
+		"stock": 5,
+		"imageUrl": "https://media.istockphoto.com/vectors/cute-romaine-character-cartoon-mascot-vegetable-healthy-food-concept-vector-id1211177106?k=20&m=1211177106&s=612x612&w=0&h=3GCp_HXvFJYTvY3jXZroQ820zOmeVtfXU4NSS59ZXxc=",
+		"minimumStock": 10
+	},
+	{
+		"name": "onion",
+		"stock": 5,
+		"imageUrl": "https://i.pinimg.com/originals/c0/60/9c/c0609c05e0ad52719db32a2a5506f763.png",
+		"minimumStock": 10
+	},
+	{
+		"name": "cheese",
+		"stock": 5,
+		"imageUrl": "https://previews.123rf.com/images/stockgiu/stockgiu1706/stockgiu170604708/80571470-ilustración-de-vector-de-comida-de-queso-lindo-divertido-kawaii.jpg?fj=1",
+		"minimumStock": 10
+	},
+	{
+		"name": "meat",
+		"stock": 5,
+		"imageUrl": "https://thumbs.dreamstime.com/b/steak-meat-kawaii-character-vector-illustration-design-94209162.jpg",
+		"minimumStock": 10
+	},
+	{
+		"name": "chicken",
+		"stock": 5,
+		"imageUrl": "https://image.shutterstock.com/image-vector/chicken-meat-character-kawaii-style-260nw-564976666.jpg",
+		"minimumStock": 10
+	}
+]
