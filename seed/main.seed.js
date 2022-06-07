@@ -18,8 +18,8 @@ sequelize
 
         const ingredientsDB = await Ingredient.bulkCreate(ingredientsJSON)
 
-        recipesJSON.forEach(async ({ name, imageURL, ingredients = [] }) => {
-            const recipe = await Recipe.create({ name, imageURL })
+        recipesJSON.forEach(async ({ name, imageUrl, ingredients = [] }) => {
+            const recipe = await Recipe.create({ name, imageUrl })
 
             ingredients.forEach(async ({ name, count }) => {
                 const ingredient = ingredientsDB.find(i => {

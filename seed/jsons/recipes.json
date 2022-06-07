@@ -1,7 +1,7 @@
 [
 	{
 		"name": "burguer",
-		"imageURL": "https://i.pinimg.com/736x/01/63/81/016381031127d08fffc8976c1cbadddd.jpg",
+		"imageUrl": "https://i.pinimg.com/736x/01/63/81/016381031127d08fffc8976c1cbadddd.jpg",
 		"ingredients": [
 			{ "name": "meat", "count": 1 },
 			{ "name": "onion", "count": 2 },
@@ -12,7 +12,7 @@
 	},
 	{
 		"name": "onion rings",
-		"imageURL": "https://cdn-icons-png.flaticon.com/512/786/786971.png",
+		"imageUrl": "https://cdn-icons-png.flaticon.com/512/786/786971.png",
 		"ingredients": [
 			{ "name": "onion", "count": 1 },
 			{ "name": "potato", "count": 2 },
@@ -21,7 +21,7 @@
 	},
 	{
 		"name": "mashed potatoes",
-		"imageURL": "https://ih1.redbubble.net/image.2306626339.3985/st,small,507x507-pad,600x600,f8f8f8.jpg",
+		"imageUrl": "https://ih1.redbubble.net/image.2306626339.3985/st,small,507x507-pad,600x600,f8f8f8.jpg",
 		"ingredients": [
 			{ "name": "lemon", "count": 1 },
 			{ "name": "potato", "count": 2 }
@@ -29,7 +29,7 @@
 	},
 	{
 		"name": "soup",
-		"imageURL": "https://cdn5.vectorstock.com/i/1000x1000/85/99/cute-miso-soup-with-wakame-seaweed-vector-27148599.jpg",
+		"imageUrl": "https://cdn5.vectorstock.com/i/1000x1000/85/99/cute-miso-soup-with-wakame-seaweed-vector-27148599.jpg",
 		"ingredients": [
 			{ "name": "meat", "count": 1 },
 			{ "name": "potato", "count": 1 }
@@ -37,7 +37,7 @@
 	},
 	{
 		"name": "meat & lemon",
-		"imageURL": "https://cdn3.vectorstock.com/i/1000x1000/52/12/kawaii-rice-roll-meat-dumpling-and-cookie-food-vector-30205212.jpg",
+		"imageUrl": "https://cdn3.vectorstock.com/i/1000x1000/52/12/kawaii-rice-roll-meat-dumpling-and-cookie-food-vector-30205212.jpg",
 		"ingredients": [
 			{ "name": "meat", "count": 1 },
 			{ "name": "lemon", "count": 1 },
@@ -47,7 +47,7 @@
 	},
 	{
 		"name": "chicken nuggets",
-		"imageURL": "https://thumbs.dreamstime.com/b/fried-chicken-nuggets-fries-sauce-29785951.jpg",
+		"imageUrl": "https://thumbs.dreamstime.com/b/fried-chicken-nuggets-fries-sauce-29785951.jpg",
 		"ingredients": [
 			{ "name": "potato", "count": 2 },
 			{ "name": "chicken", "count": 1 },
