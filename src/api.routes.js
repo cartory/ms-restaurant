@@ -7,6 +7,7 @@ const router = Router()
 router
     .get('/recipes', apiController.getRecipes)
     .get('/recipes/:id', apiController.getRecipe)
+    .get('/ingredients', apiController.getIngredients)
     .get('/history/market', apiController.getMarketHistory)
     .get('/history/recipes', apiController.getRecipesHistory)
 

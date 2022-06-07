@@ -22,6 +22,16 @@ const getRecipe = async ({ params }, res) => {
     }
 }
 
+const getIngredients = async (_, res) => {
+    try {
+        const axiosRes = await axios.get(process.env.HOST_MS_WAREHOUSE + "/api/ingredients")
+        return res.status(200).json(axiosRes.data ?? [])
+    } catch (err) {
+        console.error('error getIngredients');
+        return res.status(500).json([])
+    }
+}
+
 const getRecipesHistory = async ({ query }, res) => {
     let { page = 0, limit = 10 } = query
 
@@ -59,6 +69,7 @@ const getMarketHistory = async ({ query }, res) => {
 module.exports = {
     getRecipe,
     getRecipes,
+    getIngredients,
     getMarketHistory,
     getRecipesHistory,
 }
