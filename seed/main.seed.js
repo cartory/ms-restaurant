@@ -14,26 +14,34 @@ const {
 sequelize
     .authenticate()
     .then(async () => {
-        await sequelize.sync({ force: true, logging: true })
+        // await sequelize.sync({ logging: true })
 
-        const ingredientsDB = await Ingredient.bulkCreate(ingredientsJSON)
+        // const [recipesDB, ingredientsDB] = await Promise.all([
+        //     Recipe.bulkCreate(recipesJSON),
+        //     Ingredient.bulkCreate(ingredientsJSON),
+        // ])
 
-        recipesJSON.forEach(async ({ name, imageUrl, ingredients = [] }) => {
-            const recipe = await Recipe.create({ name, imageUrl })
+        const [recipesDB, ingredientsDB] = await Promise.all([
+            Recipe.findAll(recipesJSON),
+            Ingredient.findAll(ingredientsJSON),
+        ])
 
-            ingredients.forEach(async ({ name, count }) => {
-                const ingredient = ingredientsDB.find(i => {
-                    return i.getDataValue('name') === name
-                })
+        const recipeIngredients = []
 
-                await RecipeIngredient.create({
-                    count,
+        recipesJSON.forEach(r => {
+            const recipe = recipesDB.find(rdb => r.name === rdb.getDataValue("name"))
+            r.ingredients.forEach(async i => {
+                const ingredient = ingredientsDB.find(idb => idb.getDataValue("name") === i.name)
+                recipeIngredients.push({
+                    count: i.count,
                     RecipeId: recipe.getDataValue('id'),
                     IngredientId: ingredient.getDataValue('id'),
                 })
             })
         })
-        
+
+        await RecipeIngredient.bulkCreate(recipeIngredients)
+
         console.log("sync done");
     })
     .catch(e => console.error(e))
