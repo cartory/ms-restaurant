@@ -8,17 +8,25 @@ const app = require('./src/app')
 const server = http.createServer(app)
 const io = new socket.Server(server)
 
-io.on('connection', socket => {
+io.sockets.on('connection', socket => {
+	console.log('client => ', socket.id);
+
 	socket.on('create-room', async clientId => {
 		await socket.join(clientId)
 	})
 
 	socket.on('recipe-response', data => {
-		const { clientId } = data
+		const { clientId, foodReady } = data
+
+		if (!foodReady) {
+			socket.broadcast.emit("recipe-request", data)
+		}
+
 		io.sockets.in(clientId).emit("recipe-state-response", data)
 	})
 
 	socket.on("recipe-request", data => {
+		console.table([data]);
 		socket.broadcast.emit("recipe-request", data)
 	})
 })
